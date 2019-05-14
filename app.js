@@ -1,7 +1,7 @@
 var express = require('express')
 var app = express()
 
-app.use(express.static('public'));
+app.use(express.static('public'))
 
 var mysql = require('mysql')
 
@@ -54,11 +54,11 @@ app.use(flash())
 
 var index = require('./routes/index')
 var todo = require('./routes/todo')
-var signup = require('./routes/signup')
+var user = require('./routes/user')
 
 app.use('/', index)
 app.use('/todo', todo)
-app.use('/signup',signup)
+app.use('/user',user)
 
 app.listen(3000, function(){
 	console.log('Server running at port 3000: http://127.0.0.1:3000')

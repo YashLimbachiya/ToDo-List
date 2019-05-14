@@ -42,32 +42,32 @@
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 				<a href="index.html" class="navbar-brand"><img src="imgs/google_keep.png" alt="<%= title %>" id="google_keep"> <%= title %></a>
 			</div>
-			<h4>Already have a Account?</h4>
-			<a href="/user/login"><button type="button" class="nav navbar-nav navbar-right reglogin btn btn-primary btn-lg">Login</button></a>
+			<h4>Don't have a Account?</h4>
+			<a href="/user/signup"><button type="button" class="nav navbar-nav navbar-right reglogin btn btn-primary btn-lg">Sign Up</button></a>
 		</nav>
 		<div class="container-fluid">
             <div class="row">
                 <div class="colside">
                 </div>
-                <div class="boxmodel colmid"><br><center><h2 style="color:#002B66;">Create an account</h2></center>
+                <div class="boxmodel colmid"><br><center><h2 style="color:#002B66;">Log into your account</h2></center>
                 	<% if (message.length > 0) { %>
                 	    <div class="alert alert-success col-sm-12"><%= message %></div>
                     <% } %>
-                    <form id="myform" action="/user/signup" method="POST">
+                    <form id="myform" action="/user/login" method="POST">
                         <div class="form form-group">
-                            <label for="name">Full Name:</label>
-                            <input type="text" class="form-control" style="width:100%;" id="name" placeholder="Enter your name" name="name">
+                            <label for="usrname">Username :</label>
+                            <input type="text" class="form-control" style="width:100%;" id="usrname" placeholder="Enter your username" name="usrname">
+                            <a href="#">Forgot username?</a>
                         </div>
+
                         <div class="form form-group">
-                            <label for="usrname">Username:</label>
-                            <input type="text" class="form-control" style="width:100%;" id="usrname" placeholder="Enter a username" name="usrname">
+                            <label for="pwd">Password :</label>
+                            <input type="Password" class="form-control" style="width:100%;" id="pwd" name="pwd" placeholder="Enter your Password">
+                            <a href="#">Forgot password?</a>
                         </div>
-                        <div class="form form-group">
-                            <label for="pwd">Password:</label>
-                            <input type="Password" class="form-control" style="width:100%;" id="pwd" name="pwd" placeholder="Enter a valid Password">
-                        </div>
+
                         <center>
-                            <button type="submit" value="Submit" style="padding:1em;font-size:1em;" class="reglogin btn btn-outline-primary">Submit</button>
+                            <button type="submit" value="Submit" style="padding:1em;font-size:1em;" class="reglogin btn btn-outline-primary">Login</button>
                         </center>
                     </form>
                 </div>

@@ -3,8 +3,17 @@ var app = express()
 
 // SHOW LIST OF Tasks
 app.get('/', function(req, res, next) {
+	var user =  req.session.user;
+	var	username = req.session.username;
+
+   console.log('ddd='+username);
+   if(username == null){
+      res.redirect("/user/login");
+      return;
+   }
+
 	req.getConnection(function(error, conn) {
-		conn.query('SELECT * FROM tasks ORDER BY id DESC',function(err, rows, fields) {
+		conn.query('SELECT * FROM tasks ORDER BY id ASC',function(err, rows, fields) {
 			if (err) {
 				req.flash('error', err)
 				res.render('templates/list', {
