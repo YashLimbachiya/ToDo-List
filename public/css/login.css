@@ -1,0 +1,113 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: monospace;
+}
+
+nav {
+	border-bottom: 1px solid lightgrey;
+}
+
+#google_keep{
+	width: 50px;
+	height: 50px;
+}
+
+/* #login {
+	position: absolute;
+	right: 110px;
+	bottom: 25%
+	margin-left: 970px;
+	margin-right: 10px;
+}
+
+#signup {
+	position: absolute;
+	right: 10px;
+	bottom: 25%;
+} */
+
+/* @media screen and (min-width:1000px) {
+     body {
+         background-image:url("/imgs/rnx19.jpg");
+         background-size:cover;
+         background-repeat: no-repeat;
+     }
+ }  
+ 
+ @media screen and (min-width:300px) and (max-width:1025px) {
+     body {
+         background-image:url("/imgs/rnx19.jpg");
+         background-size:cover;
+         background-repeat: no-repeat;
+     }
+ }  */ 
+
+.boxmodel {
+    background-color:white;
+    opacity:0.9;
+    height:450px;
+    margin-top:50px;
+    border-style: none;
+    border-radius:3%;
+    width:100%;
+} 
+
+@media screen and (min-width:1025px) {
+    .colside {
+        -ms-flex: 25%;
+        flex: 25%;
+        max-width: 25%;
+    }
+}
+
+@media screen and (min-width:1025px) {
+    .colmid {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width:50%;
+    }
+}
+
+@media screen and (min-width:700px) and (max-width:1025px) {
+    .colside {
+        -ms-flex: 18.75%;
+        flex: 18.75%;
+        max-width: 18.75%;
+    }
+}
+
+@media screen and (min-width:700px) and (max-width:1025px) {
+    .column-width: {
+        -ms-flex: 62.5%;
+        flex: 62.5%;
+        max-width: 62.5%;
+    }
+}
+
+@media screen and (max-width:450px) and (max-width:700px) {
+    .colside {
+        -ms-flex: 6.25%;
+        flex: 6.25%;
+        max-width: 6.25%;
+    }
+}
+
+@media screen and (max-width:450px) and (max-width:700px) {
+    .colmid {
+        -ms-flex: 87.5%;
+        flex: 87.5%;
+        max-width: 87.5%;
+    }
+}
+
+.form {
+    padding:10px;
+    text-align:left;
+    margin-left:10px;
+    margin-right:10px;
+    color:#00FFF0;
+}

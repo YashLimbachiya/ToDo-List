@@ -1,6 +1,8 @@
 var express = require('express')
 var app = express()
 
+app.use(express.static('public'));
+
 var mysql = require('mysql')
 
 var myConnection  = require('express-myconnection')
@@ -17,9 +19,6 @@ var dbOptions = {
 app.use(myConnection(mysql, dbOptions, 'pool'))
  
 app.set('view engine', 'ejs')
- 
-var index = require('./routes/index')
-var todo = require('./routes/todo')
  
 var expressValidator = require('express-validator')
 app.use(expressValidator())
@@ -53,8 +52,13 @@ app.use(session({
 }))
 app.use(flash())
 
+var index = require('./routes/index')
+var todo = require('./routes/todo')
+var signup = require('./routes/signup')
+
 app.use('/', index)
 app.use('/todo', todo)
+app.use('/signup',signup)
 
 app.listen(3000, function(){
 	console.log('Server running at port 3000: http://127.0.0.1:3000')
