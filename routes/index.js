@@ -4,6 +4,7 @@ var app = express()
 app.get('/', function(req, res) {
 	var user =  req.session.user;
 	var	name = req.session.name;
+	var	username = req.session.username;
 
 	console.log('Name: '+name);
 	if(name == null) {
@@ -11,7 +12,7 @@ app.get('/', function(req, res) {
 	  	return;
 	}
 
-	res.render('index', {title: 'ToDo List', name: name})
+	res.render('index', {title: 'ToDo List', name: name, site: 2})
 })
 
 module.exports = app;

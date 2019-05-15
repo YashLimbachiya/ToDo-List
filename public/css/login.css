@@ -5,6 +5,7 @@
 body {
 	margin: 0;
 	font-family: monospace;
+    background: #eae7dc;
 }
 
 nav {
@@ -16,92 +17,16 @@ nav {
 	height: 50px;
 }
 
-/* #login {
-	position: absolute;
-	right: 110px;
-	bottom: 25%
-	margin-left: 970px;
-	margin-right: 10px;
-}
-
-#signup {
-	position: absolute;
-	right: 10px;
-	bottom: 25%;
-} */
-
-/* @media screen and (min-width:1000px) {
-     body {
-         background-image:url("/imgs/rnx19.jpg");
-         background-size:cover;
-         background-repeat: no-repeat;
-     }
- }  
- 
- @media screen and (min-width:300px) and (max-width:1025px) {
-     body {
-         background-image:url("/imgs/rnx19.jpg");
-         background-size:cover;
-         background-repeat: no-repeat;
-     }
- }  */ 
-
 .boxmodel {
     background-color:white;
     opacity:0.9;
     height:500px;
     margin-top:50px;
-    border-style: none;
+    border: 1px solid;
+    /* border-style: none; */
     border-radius:3%;
     width:100%;
-} 
-
-@media screen and (min-width:1025px) {
-    .colside {
-        -ms-flex: 25%;
-        flex: 25%;
-        max-width: 25%;
-    }
-}
-
-@media screen and (min-width:1025px) {
-    .colmid {
-        -ms-flex: 50%;
-        flex: 50%;
-        max-width:50%;
-    }
-}
-
-@media screen and (min-width:700px) and (max-width:1025px) {
-    .colside {
-        -ms-flex: 18.75%;
-        flex: 18.75%;
-        max-width: 18.75%;
-    }
-}
-
-@media screen and (min-width:700px) and (max-width:1025px) {
-    .column-width: {
-        -ms-flex: 62.5%;
-        flex: 62.5%;
-        max-width: 62.5%;
-    }
-}
-
-@media screen and (max-width:450px) and (max-width:700px) {
-    .colside {
-        -ms-flex: 6.25%;
-        flex: 6.25%;
-        max-width: 6.25%;
-    }
-}
-
-@media screen and (max-width:450px) and (max-width:700px) {
-    .colmid {
-        -ms-flex: 87.5%;
-        flex: 87.5%;
-        max-width: 87.5%;
-    }
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .form {

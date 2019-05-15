@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="border-bottom: 1px solid lightgrey;">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<a href="/" class="navbar-brand"><img src="imgs/google_keep.png" alt="ToDo List" id="google_keep"></a>
+	<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+		<a href="/" class="navbar-brand mr-auto mt-2 mt-lg-0">ToDo List</a>
+		<% if (site == 0) { %>
+			<h4>Already have a Account?</h4>
+			<a href="/user/login"><button type="button" class="nav navbar-nav reglogin btn btn-primary btn-lg px-1" style="margin-left: 10px;">Log In</button></a>
+		<% } else if (site == 1) { %>
+			<h4>Don't have a Account?</h4>
+			<a href="/user/signup"><button type="button" class="nav navbar-nav reglogin btn btn-primary btn-lg px-1" style="margin-left: 10px;">Sign Up</button></a>
+		<% } else if (site == 2) { %>
+			<a href="/user/logout"><button type="button" class="nav navbar-nav btn btn-primary btn-lg px-1">Log Out</button></a>
+		<% } %>
+	</div>
+</nav>
